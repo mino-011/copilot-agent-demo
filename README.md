@@ -20,7 +20,7 @@ Meeting -> Summary Generation -> Task Creation
 ## アーキテクチャー
 
 ## Flow
-- Get Teams meeting transcripts via Microsoft GraphAPI
+- Fetch Teams meeting transcripts via Microsoft GraphAPI
 - Generate summary and action items using Azure OpenAI GPT-5
 - Automatically registter tasks to Planner using Power Automate
 
@@ -41,18 +41,51 @@ Meeting -> Summary Generation -> Task Creation
 - Power Automate – タスク登録
 - Python – データ取得・処理スクリプト
 
-## Code Sample
+## Sample Code
+### Fetch meeting notes (Graph API)
+from scripts.fetch_meeting_notes import fetch_meeting_transcript
+print(fetch_meeting_transcript())
+
+### Generate summary (Azure OpenAI)
+from scripts.summarize_action_items import summarize
+transcript = "Today we finalized the launch schedule for the new product..."
+print(summarize(transcript))
+
+##コードサンプル
 ### 会議記録取得（Graph API）
 from scripts.fetch_meeting_notes import fetch_meeting_transcript
 print(fetch_meeting_transcript())
 ### 要約生成（Azure OpenAI
 from scripts.summarize_action_items import summarize
-transcript = "本日は..."
+transcript = "本日は新製品の発売予定日を決定し..."
 print(summarize(transcript))
 
-## 実行手順
+## Setup
+- Create a Microsoft 365 Developer account
+- Create an Azure OpenAI resource
+- Add your API keys and Meeting ID to the Python scripts in scripts/
+- Environment: Python 3.10+
+  
+## セットアップ
+- Microsoft 365 Developer アカウントを作成
+- Azure OpenAI リソースを作成
+- scripts/ 内の Python ファイルに API キーと Meeting ID を設定
+- 実行環境: Python 3.10+
 
-## Improvement Plan
+## Use Cases
+- Automatically distribute meeting summaries and action items after meetings
+- Summarize project meetings and register tasks with due dates
+- Provide multilingual summaries for global teams
+
+##　想定ユースケース
+- 定例会議後、議事録とアクションアイテムを自動配信
+- プロジェクト会議の内容を要約し、期限付きタスクとして登録
+- グローバルチーム向け多言語要約
+
+## Future Improvements
+- Internal data integration with SharePoint
+- Teams Chat summurization
+- Multilingual translation
 
 ## 今後の改善案
 - 社内データ統合、SharePointとの統合
