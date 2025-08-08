@@ -1,1 +1,26 @@
-
+{
+  "agentName": "M365 Meeting Summary Agent",
+  "description": "Automates meeting summarization and action item registration using Microsoft Graph API, Azure OpenAI, and Power Automate.",
+  "trigger": "Teams meeting ends",
+  "steps": [
+    {
+      "name": "Fetch Transcript",
+      "tool": "Microsoft Graph API",
+      "input": "Meeting ID",
+      "output": "Transcript text"
+    },
+    {
+      "name": "Generate Summary & Action Items",
+      "tool": "Azure OpenAI GPT-4",
+      "input": "Transcript text",
+      "output": "Summary + Action Items"
+    },
+    {
+      "name": "Register Tasks",
+      "tool": "Power Automate",
+      "input": "Action Items",
+      "output": "Tasks in Planner / To Do"
+    }
+  ],
+  "expectedOutcome": "Meeting insights and tasks are automatically created without manual effort."
+}
