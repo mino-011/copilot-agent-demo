@@ -6,7 +6,7 @@ The agent assists in automating meeting summarization and action item tracking b
 本リポジトリは、日本企業向けに設計したMicrosoft 365 Copilot Agentのサンプルプロジェクトです。
 Azure OpenAI、Microsoft Graph API、Power Platformを活用し、会議の要約とアクションアイテム管理を自動化します。
 
-##Background
+##　Background
 Meetings in Japan tend to be lengthy and creating meeting minutes and tracking tasks is often manual. This project demonstrates how Microsoft 365 Copilot can automate the entire workflow:
 Meeting -> Summary Generation -> Task Creation
 
