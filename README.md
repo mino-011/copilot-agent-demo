@@ -42,11 +42,19 @@ Meeting -> Summary Generation -> Task Creation
 - Python – データ取得・処理スクリプト
 
 ## Code Sample
-
+### 会議記録取得（Graph API）
+from scripts.fetch_meeting_notes import fetch_meeting_transcript
+print(fetch_meeting_transcript())
+### 要約生成（Azure OpenAI
+from scripts.summarize_action_items import summarize
+transcript = "本日は..."
+print(summarize(transcript))
 
 ## 実行手順
 
 ## Improvement Plan
 
 ## 今後の改善案
-- 社内データ統合
+- 社内データ統合、SharePointとの統合
+- Teamsチャット要約機能追加
+- 多言語翻訳対応
