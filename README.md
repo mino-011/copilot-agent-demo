@@ -15,6 +15,10 @@ Meeting -> Summary Generation -> Task Creation
 日本企業では会議が長く、議事録作成やタスク化が属人的になりやすい課題があります。  
 本プロジェクトでは、Microsoft 365 Copilot と AI を活用し、**「会議終了 → 要約生成 → タスク登録」**までの流れを自動化します。
 
+## Architecture Diagram
+
+## アーキテクチャー
+
 ## Flow
 - Get Teams meeting transcripts via Microsoft GraphAPI
 - Generate summary and action items using Azure OpenAI GPT-5
@@ -36,3 +40,13 @@ Meeting -> Summary Generation -> Task Creation
 - Azure OpenAI Service – 要約＆アクションアイテム生成
 - Power Automate – タスク登録
 - Python – データ取得・処理スクリプト
+
+## Code Sample
+
+
+## 実行手順
+
+## Improvement Plan
+
+## 今後の改善案
+- 社内データ統合
