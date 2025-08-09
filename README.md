@@ -7,7 +7,7 @@ The agent assists in automating meeting summarization and action item tracking b
 Meetings in Japan tend to be lengthy and creating meeting minutes and tracking tasks is often manual. This project demonstrates how Microsoft 365 Copilot can automate the entire workflow:
 Meeting -> Summary Generation -> Task Creation
 
-## Architecture Diagram/アーキテクチャ
+## Architecture Diagram
 ![Architecture Diagram](architecture-diagram.png)
 
 ## Flow
@@ -54,6 +54,9 @@ Azure OpenAI、Microsoft Graph API、Power Platformを活用し、会議の要�
 ## 背景
 日本企業では会議が長く、議事録作成やタスク化が属人的になりやすい課題があります。  
 本プロジェクトでは、Microsoft 365 Copilot と AI を活用し、**「会議終了 → 要約生成 → タスク登録」**までの流れを自動化します。
+
+## アーキテクチャー
+![Architecture Diagram](architecture-diagram.png)
 
 ## フロー
 1. Teams 会議終了後、Microsoft Graph API で会議の文字起こしデータを取得
