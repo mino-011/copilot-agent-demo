@@ -69,7 +69,7 @@ Azure OpenAI、Microsoft Graph API、Power Platformを活用し、会議の要�
 - Power Automate – タスク登録
 - Python – データ取得・処理スクリプト
 
-##コードサンプル
+## コードサンプル
 ### 会議記録取得（Graph API）
 from scripts.fetch_meeting_notes import fetch_meeting_transcript
 print(fetch_meeting_transcript())
@@ -85,7 +85,7 @@ print(summarize(transcript))
 - scripts/ 内の Python ファイルに API キーと Meeting ID を設定
 - 実行環境: Python 3.10+
 
-##　想定ユースケース
+## 想定ユースケース
 - 定例会議後、議事録とアクションアイテムを自動配信
 - プロジェクト会議の内容を要約し、期限付きタスクとして登録
 - グローバルチーム向け多言語要約
